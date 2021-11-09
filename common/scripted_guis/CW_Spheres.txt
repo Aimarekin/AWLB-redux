@@ -1,0 +1,39 @@
+scripted_gui = {
+	Spheres = {
+		context_type = player_context
+		window_name = "Spheres_window"
+		
+		visible = {
+			always = no
+		}
+
+		properties = {
+			Leader_Flag = {
+				image = "[?leader.GetFlag]"
+			}
+			Entry_Flag = {
+				image = "[?member.GetFlag]"
+			}
+		}
+
+		triggers = {
+		}
+
+		effects = {
+		}
+
+		dynamic_lists = {
+			spheres_grid = {
+				array = Global.Sphere_Leaders
+				entry_container = Spheres_Entry
+				change_scope = yes
+				value = leader
+			}
+			spheres_list = {
+				array = Sphere
+				entry_container = Spheres_List_Entry
+				value = member
+			}
+		}
+	}
+}

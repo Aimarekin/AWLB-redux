@@ -1,0 +1,235 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = { NOT = { has_country_flag = has_starting_oob } }
+				d_create_army = yes
+			}
+			if = {
+				limit = { has_dlc = "Man the Guns" }
+				every_country = {
+					set_technology = {
+						early_ship_hull_light = 1
+						popup = no
+					}
+					set_technology = {
+						basic_torpedo = 1
+						popup = no
+					}
+					set_technology = {
+						early_ship_hull_submarine = 1
+						popup = no
+					}
+				}
+				else = {
+					every_country = {
+						set_technology = {
+							early_destroyer = 1
+							popup = no
+						}
+						set_technology = {
+							early_submarine = 1
+							popup = no
+						}
+					}
+				}
+			}
+			every_country = {
+				limit = { NOT = { tag = ENG } }
+				random_list = {
+					66 = {
+						country_event = { id = actual_diplomacy.6 }
+					}
+
+					33 = {
+						country_event = { id = actual_diplomacy.7 }
+					}
+				}
+			}
+			CAR = {
+				country_event = { id = civil_war_event.1 days = 300 random = 1200 }
+			}
+			USA = {
+				country_event = { id = civil_war_event.2 days = 480 random = 1200 }
+			}
+		}
+		#every_country = {
+		#	random_events = {
+		#		66 = actual_diplomacy.6
+		#		33 = actual_diplomacy.7
+		#	}
+		#}
+	}
+	on_puppet = { # Yes
+		effect = {
+			log = "Puppeted: [ROOT.GetNameWithFlag] ([ROOT.GetTag])"
+			Puppet_Gain_Military = yes
+			Puppet_Command = yes
+		}
+	}
+	on_release_as_puppet = { # Yes
+		effect = {
+			log = "Released as Puppet: [ROOT.GetNameWithFlag] ([ROOT.GetTag])"
+			Puppet_Command = yes
+		}
+	}
+	on_annex = { # Yes
+		effect = {
+			log = "Annexed: [FROM.GetNameWithFlag] ([FROM.GetTag])"
+			FROM = {
+				drop_cosmetic_tag = yes
+			}
+		}
+	}
+	on_liberate = {
+		effect = {
+			log = "Liberated: [ROOT.GetNameWithFlag] ([ROOT.GetTag])"
+			Random_Cosmetic = yes
+		}
+	}
+	on_release_as_free = { # No
+		effect = {
+			log = "Released as free: [ROOT.GetNameWithFlag] ([ROOT.GetTag])"
+			Random_Cosmetic = yes
+		}
+	}
+	on_capitulation = { # Yes
+		effect = {
+			log = "Capitulation: [FROM.GetNameWithFlag] defeats [ROOT.GetNameWithFlag]"
+		}
+	}
+	on_civil_war_end = {
+		effect = {
+			log = "Civil War End: [ROOT.GetNameWithFlag] defeats [FROM.GetNameWithFlag]"
+			if = {
+				limit = {
+					ROOT = {
+						SOM_Somali_Civil_War_Combatant = yes
+					}
+					FROM = {
+						SOM_Somali_Civil_War_Combatant = yes
+					}
+				}
+				if = {
+					limit = {
+						SOM_Somali_Civil_War_Active = yes
+					}
+					log = " - Somali Civil War Continuing"
+					else = {
+						ROOT = {
+							save_global_event_target_as = SOM_Somali_Civil_War_Winner
+							country_event = { id = actual_diplomacy.9 hours = 2 }
+						}
+						log = " - Somali Civil War Over: [SOM_Somali_Civil_War_Winner.GetNameWithFlag] Victory"
+					}
+				}
+			}
+		}
+	}
+	on_peace = {
+		effect = {
+			log = "[THIS.GetNameWithFlag] at Peace!"
+			if = {
+				limit = { has_country_flag = Left_Faction_for_War }
+				clr_country_flag = Left_Faction_for_War
+				var:Sphere_Leader = {
+					add_to_faction = PREV
+				}
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			every_country = {
+				limit = { OR = { is_faction_leader = yes num_subjects > 0 } NOT = { has_country_flag = puppet_pp_gained } }
+				country_event = { id = Puppet_Event.10 }
+				set_country_flag = puppet_pp_gained
+			}
+			if = {
+				limit = { is_faction_leader = yes NOT = { has_country_flag = third_bloc OR = { tag = CHI tag = RUS tag = USA } } num_faction_members > 12 }
+				ROOT = {
+					set_country_flag = third_bloc
+					news_event = { id = actual_diplomacy.10 hours = 3 }
+				}
+			}
+		}
+	}
+	on_join_faction  = {
+		effect = {
+			set_variable = { Sphere_Leader = FROM }
+			if = {
+				limit = {
+					NOT = {
+						is_in_array = { FROM.Sphere = THIS }
+					}
+				}
+				FROM = {
+					set_variable = { Added_to_Sphere = PREV } Sphere_Update = yes
+				}
+			}
+		}
+	}
+	on_war_relation_added = {
+		effect = {
+			ROOT = {
+				every_other_country = {
+					limit = {
+						is_subject_of = ROOT
+						has_autonomy_state = Autonomy_Autonomous_Zone
+					}
+					add_to_war = {
+						enemy = FROM
+						targeted_alliance = ROOT
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { Sphere_Leader = FROM }
+					}
+					FROM = {
+						set_variable = { Added_to_Sphere = PREV } Sphere_Remove = yes
+					}
+				}
+			}
+			FROM = {
+				every_other_country = {
+					limit = {
+						is_subject_of = FROM
+						has_autonomy_state = Autonomy_Autonomous_Zone
+					}
+					add_to_war = {
+						enemy = ROOT
+						targeted_alliance = FROM
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { Sphere_Leader = ROOT }
+					}
+					ROOT = {
+						set_variable = { Added_to_Sphere = PREV } Sphere_Remove = yes
+					}
+				}
+			}
+		}
+	}
+	on_government_change = {
+		effect = {
+			if = {
+				limit = { 
+					tag = USA
+					NOT = { has_government = Marxism_Leninism }
+				}
+				country_event = { id = civil_war_event.4 days = 1 random = 1200 }
+			}
+		}
+	}
+	on_yearly = {
+		effect = {
+			if = { #way to get the third world war to actually start
+				limit = { OR = { tag = RUS tag = CHI } is_ai = yes date > 1988.11.1 NOT = { has_global_flag = cold_war_gone_hot } }
+				add_political_power = 150
+			}
+		}
+	}
+}

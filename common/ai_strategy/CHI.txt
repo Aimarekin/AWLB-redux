@@ -1,0 +1,79 @@
+CHI_RUS_Cold_War = {
+	allowed = {
+		tag = CHI
+	}
+	enable = {
+		country_exists = RUS
+		NOT = { OR = { is_ally_with = RUS has_global_flag = cold_war_gone_hot } }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = RUS
+		value = 150
+	}
+
+	ai_strategy = {
+		type = contain
+		id = RUS
+		value = 150
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = RUS
+		value = 150
+	}
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		target = europe
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		target = asia
+		value = 100
+	}
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		target = africa
+		value = 100
+	}
+}
+
+New_Marxists_join_CHI = {
+	allowed = {
+		always = yes
+	}
+
+	enable = {
+		has_government = New_Marxism
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = befriend
+		id = CHI
+		value = 250
+	}
+}
+
+CHI_Send_Volunteers_to_Civil_War = {
+	reversed = yes
+
+	enable = {
+		has_government = New_Marxism
+		has_civil_war = yes
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = CHI
+		value = 150
+	}
+}

@@ -1,0 +1,135 @@
+RUS_CHI_Cold_War = {
+	allowed = {
+		tag = RUS
+	}
+	enable = {
+		country_exists = CHI
+		NOT = { OR = { is_ally_with = CHI has_global_flag = cold_war_gone_hot } }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = CHI
+		value = 150
+	}
+
+	ai_strategy = {
+		type = contain
+		id = CHI
+		value = 150
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = CHI
+		value = 150
+	}
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		target = europe
+		value = 300
+	}
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		target = asia
+		value = 100
+	}
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		target = africa
+		value = 100
+	}
+}
+
+RUS_UN_Dont_Leave = {
+	enable = {
+		is_in_faction_with = RUS
+	}
+
+	ai_strategy = {
+		type = diplo_action_desire
+		id = "RUS"
+		target = LEAVE_FACTION
+		value = -150
+	}
+}
+
+Marxist_Leninists_join_RUS = {
+	allowed = {
+		always = yes
+	}
+
+	enable = {
+		has_government = Marxism_Leninism
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = befriend
+		id = RUS
+		value = 250
+	}
+}
+
+RUS_Send_Volunteers_to_Civil_War = {
+	reversed = yes
+
+	enable = {
+		OR = {
+			has_government = Marxism_Leninism
+			AND = {
+				any_country = {
+					civilwar_target = PREV
+					has_government = New_Marxism
+				}
+				NOT = {
+					any_country = {
+						civilwar_target = PREV
+						has_government = Marxism_Leninism
+					}
+				}
+			}
+			is_in_array = { RUS.Sphere = THIS }
+		}
+		has_civil_war = yes
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = RUS
+		value = 150
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = RUS
+		value = 50
+	}
+}
+RUS_Send_Volunteers_to_War = {
+	reversed = yes
+
+	enable = {
+		has_government = Marxism_Leninism
+		has_war = yes
+		OR = {
+			has_defensive_war = yes
+			is_in_array = { RUS.Sphere = THIS }
+		}
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = RUS
+		value = 150
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = RUS
+		value = 50
+	}
+}

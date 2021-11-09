@@ -1,0 +1,245 @@
+Puppet_Command = {
+	save_event_target_as = new_puppet
+	OVERLORD = {
+		country_event = Puppet_Event.1
+		if = {
+			limit = {
+				has_variable = Sphere_Leader
+			}
+			var:Sphere_Leader = {
+				set_variable = { Added_to_Sphere = PREV.PREV } Sphere_Update = yes
+			}
+		}
+	}
+}
+
+Puppet_Autonomous_Cosmetic = {
+	if = {
+		limit = {
+			is_subject_of = RUS
+		}
+		set_cosmetic_tag = COUNTRY_Soviet_Socialist_Republic
+
+		else_if = {
+			limit = {
+				is_subject_of = UAR
+			}
+			set_cosmetic_tag = COUNTRY_Arab_Republic
+		}
+
+		else_if = {
+			limit = {
+				is_subject_of = YUG
+			}
+			set_cosmetic_tag = COUNTRY_Socialist_Republic
+		}
+	}
+}
+Puppet_Drop_Military = {
+	hidden_effect = {
+		if = {
+			limit = {
+				event_target:new_puppet = {
+					Puppet_Is_Military = yes
+				}
+			}
+			event_target:new_puppet = {
+				drop_cosmetic_tag = yes
+			}
+		}
+	}
+}
+Puppet_Gain_Military = {
+	hidden_effect = {
+		if = {
+			limit = {
+				FROM = { tag = RUS }
+			}
+			set_cosmetic_tag = COUNTRY_Soviet_Military_Administration
+
+			else_if = {
+				limit = {
+					has_country_flag = Name_Occupation_Zone
+				}
+				set_cosmetic_tag = COUNTRY_Occupation_Zone
+			}
+
+			else = {
+				set_cosmetic_tag = COUNTRY_Military_Administration
+			}
+		}
+	}
+}
+
+Random_Cosmetic = {
+	hidden_effect = {
+		if = {
+			limit = {
+				is_subject = no
+			}
+			set_country_flag = temp_sub
+			
+			if = {
+				limit = {
+					is_in_faction = yes
+				}
+				faction_leader = {
+					add_to_faction = ZZZ
+				}
+			}
+			
+			ZZZ = {
+				set_autonomy = {
+					target = PREV
+					autonomy_state = autonomy_satellite
+				}
+			}
+		}
+		random_list = {
+			10 = { set_cosmetic_tag = COUNTRY_Democratic_Peoples_Republic }
+			10 = { set_cosmetic_tag = COUNTRY_Democratic_Peoples_Republic_2 }
+			10 = { set_cosmetic_tag = COUNTRY_Democratic_Republic }
+			10 = { set_cosmetic_tag = COUNTRY_Democratic_Republic_2 }
+			10 = { set_cosmetic_tag = COUNTRY_Peoples_Democratic_Republic }
+			10 = { set_cosmetic_tag = COUNTRY_Peoples_Democratic_Republic_2 }
+			10 = { set_cosmetic_tag = COUNTRY_Peoples_Republic }
+			10 = { set_cosmetic_tag = COUNTRY_Peoples_Republic_2 }
+			10 = { set_cosmetic_tag = COUNTRY_Peoples_Socialist_Republic }
+			10 = { set_cosmetic_tag = COUNTRY_Peoples_Socialist_Republic_2 }
+			10 = { set_cosmetic_tag = COUNTRY_Republic }
+			10 = { set_cosmetic_tag = COUNTRY_Republic_2 }
+			10 = { set_cosmetic_tag = COUNTRY_Socialist_Peoples_Republic }
+			10 = { set_cosmetic_tag = COUNTRY_Socialist_Peoples_Republic_2 }
+			10 = { set_cosmetic_tag = COUNTRY_Socialist_Republic }
+			10 = { set_cosmetic_tag = COUNTRY_Socialist_Republic_2 }
+		}
+		if = {
+			limit = {
+				has_country_flag = temp_sub
+			}
+			clr_country_flag = temp_sub
+			ZZZ = {
+				set_autonomy = {
+					target = PREV
+					autonomy_state = autonomy_free
+				}
+				leave_faction = yes
+			}
+		}
+	}
+}
+
+Puppet_Satellite = {
+	if = {
+		limit = {
+			is_subject_of = RUS
+			original_tag = CHI
+		}
+		set_cosmetic_tag = CHI_Provisional
+		else = {
+			Random_Cosmetic = yes
+		}
+	}
+}
+
+set_union_cosmetic_tag = {
+
+	if = {
+		limit = {
+			FROM = {
+				OR = {
+					tag = AUS
+					tag = HUN
+				}
+			}
+			OR = {
+				tag = AUS
+				tag = HUN
+			}
+		}
+		set_cosmetic_tag = austria_hungary_union
+	}
+	if = {
+		limit = {
+			FROM = {
+				OR = {
+					tag = BEL
+					tag = HOL
+					AND = {
+						tag = LUX
+						OR = {
+							BEL = { exists = no }
+							HOL = { exists = no }
+						}
+					}
+				}
+			}
+			OR = {
+				tag = BEL
+				tag = HOL
+				AND = {
+					tag = LUX
+					OR = {
+						BEL = { exists = no }
+						HOL = { exists = no }
+					}
+				}
+			}
+		}
+		set_cosmetic_tag = united_netherlands
+	}
+	if = {
+		limit = {
+			FROM = {
+				OR = {
+					tag = GER
+					tag = AUS
+				}
+			}
+			OR = {
+				tag = AUS
+				tag = GER
+			}
+		}
+		set_cosmetic_tag = pan_germanic_republic
+	}
+	if = {
+		limit = {
+			FROM = {
+				tag = UAR
+			}
+			tag = TUR
+		}
+		set_cosmetic_tag = ottoman_restored
+	}
+	if = {
+		limit = {
+			FROM = {
+				OR = {
+					tag = POR
+					tag = SPA
+				}
+			}
+			OR = {
+				tag = SPA
+				tag = POR
+			}
+		}
+		set_cosmetic_tag = iberian_union
+	}
+	if = {
+		limit = {
+			FROM = {
+				OR = {
+					tag = POL
+					tag = ROM
+				}
+			}
+			OR = {
+				tag = ROM
+				tag = POL
+			}
+		}
+		set_cosmetic_tag = intermarium
+	}
+}
