@@ -14,7 +14,7 @@ state = {
 		victory_points = { 6880 1 }
 		victory_points = { 6933 1 }
 		victory_points = { 970 1 }
-		owner = POR
+		owner = SPA
 		add_core_of = POR
 		
 		buildings = {infrastructure = 5 industrial_complex = 2 3790 = { naval_base = 2 } } 

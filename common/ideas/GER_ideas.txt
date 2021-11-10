@@ -1,0 +1,27 @@
+ideas = {
+	country = {
+		GER_warsaw_treaty = { 
+			picture = HUN_treaty_of_triannon
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+				
+			modifier = {
+				conscription_factor = -0.5
+				autonomy_manpower_share = 0.5
+				autonomy_gain_global_factor = -0.25
+			}
+
+			on_remove = {
+				country_lock_all_division_template = no
+			}
+		}
+	}
+}

@@ -12,7 +12,7 @@ state = {
 	history = {
 		victory_points = { 9817 10 }
 		victory_points = { 11673 5 }
-		owner = POR
+		owner = SPA
 		add_core_of = POR
 		
 		buildings = {infrastructure = 5 industrial_complex = 2 dockyard = 1 9817 = { naval_base = 3 } } 

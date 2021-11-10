@@ -1,0 +1,25 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_pol_compass"
+		texturefile = "gfx/interface/pol_compass.dds"
+	}
+
+	spriteType = {
+		name = "GFX_pol_popular_opinion_indicator"
+		texturefile = "gfx/interface/pol_popular_opinion_indicator.dds"
+	}
+
+	frameAnimatedSpriteType = {
+		name = "GFX_pol_current_party_indicator"
+		texturefile = "gfx/interface/pol_current_party_indicator.dds"
+		noOfFrames = 2
+		animation_rate_fps = 0.5
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		alwaystransparent = yes
+		effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+
+}

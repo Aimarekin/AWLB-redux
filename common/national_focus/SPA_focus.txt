@@ -1,0 +1,92 @@
+﻿search_filter_prios = {
+	FOCUS_FILTER_POLITICAL = 1010
+
+	
+ 
+	
+	
+	FOCUS_FILTER_RESEARCH = 522
+
+	
+	FOCUS_FILTER_INDUSTRY = 509
+
+}
+
+focus_tree = {
+	id = generic_focus
+	
+	country = {
+		base = 0
+
+		modifier = {
+			tag = SPA
+			add = 10
+		}
+	}
+	reset_on_civilwar = no
+
+	focus = {
+		id = SPA_continue_the_regime
+		icon = GFX_focus_spa_unify_the_nationalist_front
+		x = 1
+		y = 0
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		mutually_exclusive = {
+			focus = SPA_continue_the_regime
+			focus = SPA_assassinate_franco
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = SPA_the_return_of_democracy
+		icon = GFX_focus_intervention_spain_republic
+		x = 10
+		y = 0
+		relative_position_id = SPA_continue_the_regime
+
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		mutually_exclusive = {
+			focus = SPA_continue_the_regime
+			focus = SPA_assassinate_franco
+		}
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SPA_assassinate_franco
+		icon = GFX_focus_spa_caudillo_of_spain
+		x = 10
+		y = 0
+		relative_position_id = SPA_the_return_of_democracy
+
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		mutually_exclusive = {
+			focus = SPA_the_return_of_democracy
+			focus = SPA_continue_the_regime
+		}
+
+		completion_reward = {
+			
+		}
+	}
+
+}

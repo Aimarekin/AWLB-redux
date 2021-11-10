@@ -16,43 +16,27 @@ set_technology = {
 }
 
 set_politics = {
-	ruling_party = Marxism_Leninism
-	last_election = "1.1.1"
+	ruling_party = demcap
+	last_election = "1952.11.2"
 	election_frequency = 48
 	elections_allowed = yes
 }
 
+set_variable = { economic_spectrum = 70 }
+set_variable = { power_spectrum = 10 }
 set_popularities = {
-	Marxism_Leninism = 100
+	demcap = 40
+	authcap = 30
+	authcom = 15
 }
 
 create_country_leader = {
 	name = "Willis Carto"
 	picture = "gfx/leaders/USA/Willis Carto.dds"
-	ideology = Reactionism_ideology
-	traits = { SUBIDEOLOGY_White_Nationalism }
+	ideology = fascism
 }
 create_country_leader = {
-	name = "John Gates"
+	name = "Dwight Eisenhower"
 	picture = "gfx/leaders/USA/John Gates.dds"
-	ideology = Reformist_Socialism_ideology
-	traits = { SUBIDEOLOGY_Bill_of_Rights_Socialism }
-}
-create_country_leader = {
-	name = "Bob Avakian"
-	picture = "gfx/leaders/USA/Bob Avakian.dds"
-	ideology = New_Marxism_ideology
-	traits = { SUBIDEOLOGY_Marxism_Leninism_Maoism }
-}
-create_country_leader = {
-	name = "Gus Hall"
-	picture = "gfx/leaders/USA/Gus Hall.dds"
-	ideology = Marxism_Leninism_ideology
-	traits = { SUBIDEOLOGY_Constitutional_Marxism }
-}
-create_country_leader = {
-	name = "Bob Avakian"
-	picture = "gfx/leaders/USA/Bob Avakian.dds"
-	ideology = Hypersocialism_ideology
-	traits = { SUBIDEOLOGY_New_Synthesis_Communism }
+	ideology = americalol
 }

@@ -36,12 +36,42 @@ guiTypes = {
 			fixedsize = yes
 		}		
 		
+		containerWindowType = {
+			name = "political_compass"
+			position = { x= 264 y = 336 }
+			size = { width=100 height=100 }
+
+			iconType = {
+				name = "compass"
+				spriteType = "GFX_pol_compass"
+				position = { x = 0 y = 0 }
+			}
+			
+			iconType = {
+				name ="party_indicator"
+				spriteType = "GFX_pol_current_party_indicator"
+				position = { x= 0 y = 0 }
+			}
+
+			containerWindowType = {
+				name = "popular_opinion"
+				position = { x= 34 y = 18 }
+				size = { width=13 height=13 }
+
+				iconType = {
+					name ="popular_opinion_icon"
+					spriteType = "GFX_pol_popular_opinion_indicator"
+					position = { x= -6 y = -6 }
+				}
+			}
+		}
+
 		iconType ={
 			name ="pol_view_bg"
 			spriteType = "GFX_pol_view_bg"
 			position = { x= 0 y = 44 }
 			Orientation = "UPPER_LEFT"
-		}	
+		}
 
 		iconType ={
 			name ="pol_faction_icon"
@@ -76,7 +106,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "political_pie_chart"
-			position = { x= 270 y = 334 }
+			position = { x= -9999 y = -9999 }
 			size = { width=100 height=100 }
 			clipping = no
 
@@ -89,7 +119,7 @@ guiTypes = {
 			iconType ={
 				name ="pol_view_bg"
 				spriteType = "GFX_pol_piechart_overlay_63x63"
-				position = { x= -2 y = 1s }
+				position = { x= -2 y = 1 }
 			}
 		}
 
