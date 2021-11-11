@@ -1,0 +1,22 @@
+l_english:
+  # Italian badoglio administration/civil war names
+  cITAbadog: "Badoglian Italy"
+  cITAbadog_DEF: "Badoglian Italy"
+  cITAbadog_comauth: "Italian Popular Front"
+  cITAbadog_comauth_DEF: "The Italian Popular Front"
+  cITAbadog_comdem: "Italian Liberation Comittee"
+  cITAbadog_comdem_DEF: "The Italian Liberation Comittee"
+  cITAbadog_socdem: "Provisional Italian Government"
+  cITAbadog_socdem_DEF: "The Provisional Italian Government"
+  cITAbadog_capdem: "Provisional Italian Government"
+  cITAbadog_capdem_DEF: "The Provisional Italian Government"
+
+  # Eritrean Independence War
+  cERIindepwar: "Eritrean Liberation Front"
+  cERIindepwar_DEF: "The Eritrean Liberation Front"
+  cERIindepwar_comauth: "Eritrean People's Liberation Front"
+  cERIindepwar_comauth_DEF: "The Eritrean People's Liberation Front"
+  cERIindepwar_comdem: "Eritrean People's Liberation Front"
+  cERIindepwar_comdem_DEF: "The Eritrean People's Liberation Front"
+  cERIindepwar_socauth: "Eritrean People's Liberation Front"
+  cERIindepwar_socauth_DEF: "The Eritrean People's Liberation Front"

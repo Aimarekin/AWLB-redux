@@ -11,10 +11,8 @@ state = {
 
 	history = {
 		victory_points = { 3473 1 }
-		owner = ZAP
-		add_core_of = ZAP
-		add_core_of = POL
-		add_claim_by = GER
+		owner = GER
+		add_core_of = GER
 		
 		buildings = {infrastructure = 6 industrial_complex = 1 } 
 	}
