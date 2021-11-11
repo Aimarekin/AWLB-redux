@@ -1,0 +1,68 @@
+﻿l_english:
+  # Special factions
+  FACTION_Sovintern: "Sovintern"
+  FACTION_New_International: "New International"
+  FACTION_United_Nations: "United Nations"
+  FACTION_Vietnamese: "RASEAN"
+
+  # Generic factions
+
+  # Any ideology
+  FACTION_NAME_GENERIC_1:0 "Pact of $LEADER_COUNTRY_DEF$"
+  FACTION_NAME_GENERIC_2:0 "$LEADER_COUNTRY_ADJ$ Bloc"
+  FACTION_NAME_GENERIC_3:0 "$CONTINENT_ADJ$ Cooperation Treaties"
+  FACTION_NAME_GENERIC_4:0 "Unified Defense League"
+  FACTION_NAME_GENERIC_5:0 "$LEADER_COUNTRY_ADJ$ Pact"
+  FACTION_NAME_GENERIC_6:0 "Nations of $CONTINENT$"
+
+  # Communist
+  FACTION_NAME_COM_1:0 "New International"
+  FACTION_NAME_COM_2:0 "International Proletariat Union"
+  FACTION_NAME_COM_3:0 "Unified League of Workers"
+  FACTION_NAME_COM_4:0 "Commonwealth of Workers"
+  FACTION_NAME_COM_5:0 "People's International Union"
+
+  # Authoritarian Communist
+  FACTION_NAME_AUTHCOM_1:0 "Second Comintern"
+  FACTION_NAME_AUTHCOM_2:0 "Pact of Lenin"
+  FACTION_NAME_AUTHCOM_3:0 "International Brotherhood"
+  
+  # Democratic Communist
+  FACTION_NAME_DEMCOM_1:0 "Coalition for the Workers' Freedom"
+  FACTION_NAME_DEMCOM_2:0 "Pact of Popular Freedom"
+  FACTION_NAME_DEMCOM_3:0 "People's Confederation"
+
+  # Capitalist
+  FACTION_NAME_CAP_1:0 "Unified Defense Alliance"
+  FACTION_NAME_CAP_2:0 "Cross-National Defensive Pact"
+  FACTION_NAME_CAP_3:0 "Alliance of Free Nations"
+  FACTION_NAME_CAP_4:0 "The New Entente"
+  FACTION_NAME_CAP_5:0 "International Solidarity"
+
+  # Democratic Capitalist
+  FACTION_NAME_DEMCAP_1:0 "$CONTINENT_ADJ$ Treaty Organization"
+  FACTION_NAME_DEMCAP_2:0
+
+  FACTION_NAME_DEMOCRATIC_1:0 "The Worker's Association"
+  FACTION_NAME_DEMOCRATIC_2:0 "The New Entente"
+  FACTION_NAME_DEMOCRATIC_3:0 "The Communal Concordat"
+  FACTION_NAME_DEMOCRATIC_4:0 "The Greater People's Union"
+  FACTION_NAME_DEMOCRATIC_5:0 "Coalition for the Worker's Freedom"
+  FACTION_NAME_DEMOCRATIC_6:0 "United Federation of the World"
+  FACTION_NAME_COMMUNIST_1:0 "The Social Compact"
+  FACTION_NAME_COMMUNIST_2:0 "Aligned Syndicate of States"
+  FACTION_NAME_COMMUNIST_3:0 "The Brotherhood Combine"
+  FACTION_NAME_COMMUNIST_4:0 "The Pact of Lenin"
+  FACTION_NAME_COMMUNIST_5:0 "The $LEADER_COUNTRY_ADJ$ Bloc"
+  FACTION_NAME_NEW_MARXIST_1:0 "Brotherhood of $CONTINENT$"
+  FACTION_NAME_NEW_MARXIST_2:0 "Political Freedom Group"
+  FACTION_NAME_NEW_MARXIST_3:0 "The League of Mao"
+  FACTION_NAME_NEW_MARXIST_4:0 "The $CONTINENT$ Cooperation Committee"
+  FACTION_NAME_NEW_MARXIST_5:0 "People's Confederation"
+  FACTION_NAME_NONALIGNED_1:0 "$CONTINENT_ADJ$ Defense League"
+  FACTION_NAME_NONALIGNED_2:0 "The $LEADER_COUNTRY$ Congress"
+  FACTION_NAME_NONALIGNED_3:0 "The $CONTINENT$ Alliance"
+  FACTION_NAME_NONALIGNED_4:0 "Confederate $CONTINENT_ADJ$ Nations"
+  FACTION_NAME_NONALIGNED_5:0 "The $LEADER_COUNTRY$ Coalition"
+  FACTION_NAME_REACTIONISM_1:0 "Alliance of Free Nations"
+  FACTION_NAME_REACTIONISM_2:0 "Anti-Communist Pact"
