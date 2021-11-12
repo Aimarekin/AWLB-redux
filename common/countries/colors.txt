@@ -71,8 +71,8 @@ MOL = {
 	color_ui = rgb { 109 51 13 }
 }
 GER = {
-	color = rgb { 132 43 31 }
-	color_ui = rgb { 132 43 31 }
+	color = rgb { 90 73 70 }
+	color_ui = rgb { 90 73 70 }
 }
 ZAP = {
 	color = rgb { 204 126 126 }

@@ -10,8 +10,8 @@ state = {
 	}
 
 	history = {
-		owner = USA
-		add_core_of = USA
+		owner = ENG
+		add_core_of = CAN
 		
 		buildings = {infrastructure = 1 12503 = { naval_base = 1 } } 
 	}
