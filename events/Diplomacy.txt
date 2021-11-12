@@ -349,7 +349,7 @@ country_event = { #Hidden joining benefactor event
 		}
 		if = {
 			limit = { has_government = New_Marxism }
-			CHI = {
+			PRC = {
 				country_event = { id = actual_diplomacy.1 hours = 2 }
 			}
 		}
@@ -390,7 +390,7 @@ news_event = { #new bloc in world
 		trigger = {
 			OR = {
 				tag = RUS
-				tag = CHI
+				tag = PRC
 			}
 			has_offensive_war_with = FROM
 		}

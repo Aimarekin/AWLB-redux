@@ -178,7 +178,7 @@ NOR = {
 	color = rgb { 114 66 66 }
 	color_ui = rgb { 114 66 66 }
 }
-CHI = {
+PRC = {
 	color = rgb { 255 20 75 }
 	color_ui = rgb { 255 20 75 }
 }

@@ -11,7 +11,7 @@ Cold_War = {
 	picture = GFX_Decision_Cat_SOM_Somali_Civil_War_Intervention
 	visible = {
 		OR = {
-			tag = CHI
+			tag = PRC
 			tag = RUS
 			has_country_flag = third_bloc
 		}
@@ -29,7 +29,7 @@ alignment_category = {
 			OR = {
 				tag = RUS
 				tag = ZZZ
-				tag = CHI
+				tag = PRC
 			}
 		}
 	}
@@ -50,7 +50,7 @@ pan_socialist_decisions = {
 		NOT = {
 			OR = {
 				tag = RUS
-				tag = CHI
+				tag = PRC
 				tag = ZZZ
 			}
 		}	

@@ -29,7 +29,7 @@ puppet_decisions = {
 			modifier = {
 				add = 10
 				tag = RUS
-				FROM = { tag = CHI }
+				FROM = { tag = PRC }
 				controls_state = 761
 				controls_state = 714
 				controls_state = 715

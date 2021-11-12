@@ -39,7 +39,7 @@ debug_decisions = {
 				}
 				add_ai_strategy = {
 					type = prepare_for_war
-					id = CHI
+					id = PRC
 					value = 300
 				}
 			}
@@ -66,7 +66,7 @@ debug_decisions = {
 		}
 
 		complete_effect = {
-			CHI = {
+			PRC = {
 				declare_war_on = {
 					target = RUS
 					type = topple_government
@@ -82,19 +82,19 @@ debug_decisions = {
 				}
 				add_to_war = {
 					targeted_alliance = RUS
-					enemy = CHI
+					enemy = PRC
 				}
 			}
 			
 			every_country = {
 				limit = {
-					OR = { is_in_faction_with = CHI is_in_array = { CHI.Sphere = THIS } }
+					OR = { is_in_faction_with = PRC is_in_array = { CHI.Sphere = THIS } }
 				}
-				CHI = {
+				PRC = {
 					add_to_faction = PREV
 				}
 				add_to_war = {
-					targeted_alliance = CHI
+					targeted_alliance = PRC
 					enemy = RUS
 				}
 			}

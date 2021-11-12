@@ -14,7 +14,7 @@ Cold_War = {
 			OR = {
 				AND = {
 					country_exists = SML
-					tag = CHI
+					tag = PRC
 				}
 				AND = {
 					tag = RUS
@@ -62,7 +62,7 @@ Cold_War = {
 			}
 			if = {
 				limit = {
-					tag = CHI
+					tag = PRC
 				}
 				random_state = {
 					limit = { is_owned_by = SML is_controlled_by = SML }
@@ -159,11 +159,11 @@ Cold_War = {
 				OR = {
 					has_global_flag = cold_war_gone_hot 
 					is_subject_of = RUS
-					is_subject_of = CHI
+					is_subject_of = PRC
 				}
 			}
 			OR = {
-				tag = CHI
+				tag = PRC
 				tag = RUS
 			}
 		}
@@ -173,7 +173,7 @@ Cold_War = {
 		ai_will_do = {
 			factor = 0
 			modifier = {
-				tag = CHI
+				tag = PRC
 				strength_ratio = {
 					tag = RUS
 					ratio > 1
@@ -183,7 +183,7 @@ Cold_War = {
 			modifier = {
 				tag = RUS
 				strength_ratio = {
-					tag = CHI
+					tag = PRC
 					ratio > 1
 				}
 				add = 2
@@ -194,7 +194,7 @@ Cold_War = {
 				add = 2
 			}
 			modifier = {
-				tag = CHI
+				tag = PRC
 				check_variable = { RUS.num_subjects < CHI.num_subjects }
 				add = 2
 			}
@@ -211,7 +211,7 @@ Cold_War = {
 		complete_effect = {
 			set_global_flag = cold_war_gone_hot 
 			if = {
-				limit = { tag = CHI }
+				limit = { tag = PRC }
 				declare_war_on = {
 					target = RUS
 					type = puppet_wargoal_focus
@@ -220,7 +220,7 @@ Cold_War = {
 			if = {
 				limit = { tag = RUS }
 				declare_war_on = {
-					target = CHI
+					target = PRC
 					type = puppet_wargoal_focus
 				}
 			}
@@ -237,7 +237,7 @@ Cold_War = {
 				OR = {
 					has_global_flag = cold_war_gone_hot 
 					is_subject_of = RUS
-					is_subject_of = CHI
+					is_subject_of = PRC
 					tag = RUS
 				}
 			}
@@ -280,13 +280,13 @@ Cold_War = {
 
 alignment_category = {
 	
-	lean_towards_CHI = {
+	lean_towards_PRC = {
 
 		visible = {
 			NOT = {
 				OR = {
 					has_global_flag = cold_war_gone_hot
-					is_in_faction_with = CHI
+					is_in_faction_with = PRC
 					is_faction_leader = yes
 					has_country_flag = independent_bloc
 				}
@@ -310,13 +310,13 @@ alignment_category = {
 
 	}
 
-	align_with_CHI = {
+	align_with_PRC = {
 
 		visible = {
 			NOT = {
 				OR = {
 					has_global_flag = cold_war_gone_hot
-					is_in_faction_with = CHI
+					is_in_faction_with = PRC
 					is_faction_leader = yes
 					has_country_flag = independent_bloc
 				}
@@ -340,7 +340,7 @@ alignment_category = {
 				ruling_party = New_Marxism
 				elections_allowed = no
 			}
-			CHI = {
+			PRC = {
 				country_event = { id = actual_diplomacy.1 hours = 2 }
 			}
 		}
@@ -639,7 +639,7 @@ pan_socialist_decisions = {
 						has_guaranteed = ROOT
 						tag = ZZZ
 						tag = RUS
-						tag = CHI
+						tag = PRC
 						is_subject = yes
 						is_faction_leader = yes
 						has_war_with = ROOT
@@ -696,7 +696,7 @@ pan_socialist_decisions = {
 					OR = {
 						tag = ZZZ
 						tag = RUS
-						tag = CHI
+						tag = PRC
 						is_subject = yes
 						is_faction_leader = yes
 						AND = {
@@ -742,7 +742,7 @@ pan_socialist_decisions = {
 					OR = {
 						tag = ZZZ
 						tag = RUS
-						tag = CHI
+						tag = PRC
 					}
 				}
 				is_neighbor_of = ROOT

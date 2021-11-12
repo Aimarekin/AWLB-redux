@@ -133,9 +133,9 @@ Puppet_Satellite = {
 	if = {
 		limit = {
 			is_subject_of = RUS
-			original_tag = CHI
+			original_tag = PRC
 		}
-		set_cosmetic_tag = CHI_Provisional
+		set_cosmetic_tag = PRC_Provisional
 		else = {
 			Random_Cosmetic = yes
 		}

@@ -3,27 +3,27 @@ RUS_CHI_Cold_War = {
 		tag = RUS
 	}
 	enable = {
-		country_exists = CHI
-		NOT = { OR = { is_ally_with = CHI has_global_flag = cold_war_gone_hot } }
+		country_exists = PRC
+		NOT = { OR = { is_ally_with = PRC has_global_flag = cold_war_gone_hot } }
 	}
 
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = prepare_for_war
-		id = CHI
+		id = PRC
 		value = 150
 	}
 
 	ai_strategy = {
 		type = contain
-		id = CHI
+		id = PRC
 		value = 150
 	}
 
 	ai_strategy = {
 		type = antagonize
-		id = CHI
+		id = PRC
 		value = 150
 	}
 

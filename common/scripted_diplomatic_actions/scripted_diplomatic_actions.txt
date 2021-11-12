@@ -173,7 +173,7 @@ scripted_diplomatic_actions = {
 					ROOT = { tag = RUS }
 					any_country = {
 						has_war_with = FROM
-						check_variable = { Sphere_Leader = CHI }
+						check_variable = { Sphere_Leader = PRC }
 					}
 					add = 100
 				}
@@ -187,7 +187,7 @@ scripted_diplomatic_actions = {
 							has_government = New_Marxism
 						}
 						AND = {
-							ROOT = { tag = CHI }
+							ROOT = { tag = PRC }
 							has_government = Marxism_Leninism
 						}
 					}
