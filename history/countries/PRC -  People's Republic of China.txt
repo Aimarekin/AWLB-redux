@@ -27,21 +27,8 @@ set_popularities = {
 }
 
 create_country_leader = {
-	name = "Hua Guofeng"
+	name = "Mao Zedong"
 	picture = "gfx/leaders/CHI/Hua Guofeng.dds"
 	ideology = New_Marxism_ideology
 	traits = { SUBIDEOLOGY_Mao_Zedong_Thought }
 }
-
-create_faction = Faction_New_International
-add_to_faction = CHI
-add_to_faction = FRA
-add_to_faction = KOR
-add_to_faction = PAK
-
-add_to_array = { Global.Sphere_Leaders = CHI }
-set_variable = { Sphere_Leader = CHI }
-set_variable = { Added_to_Sphere = FRA } Sphere_Update = yes
-set_variable = { Added_to_Sphere = KOR } Sphere_Update = yes
-set_variable = { Added_to_Sphere = SML } Sphere_Update = yes
-set_variable = { Added_to_Sphere = PAK } Sphere_Update = yes

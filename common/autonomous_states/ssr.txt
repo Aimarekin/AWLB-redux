@@ -1,5 +1,5 @@
 autonomy_state = {
-	id = Autonomy_Autonomous_Zone
+	id = autonomy_ssr
 	
 	use_overlord_color = yes
 	default = no
@@ -30,7 +30,7 @@ autonomy_state = {
 	}
 	
 	ai_subject_wants_higher = {
-		factor = 0.0
+		factor = 
 	}
 	
 	ai_overlord_wants_lower = {

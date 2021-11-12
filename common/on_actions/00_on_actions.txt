@@ -175,7 +175,7 @@ on_actions = {
 				every_other_country = {
 					limit = {
 						is_subject_of = ROOT
-						has_autonomy_state = Autonomy_Autonomous_Zone
+						has_autonomy_state = autonomy_ssr
 					}
 					add_to_war = {
 						enemy = FROM
@@ -195,7 +195,7 @@ on_actions = {
 				every_other_country = {
 					limit = {
 						is_subject_of = FROM
-						has_autonomy_state = Autonomy_Autonomous_Zone
+						has_autonomy_state = autonomy_ssr
 					}
 					add_to_war = {
 						enemy = ROOT

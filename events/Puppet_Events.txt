@@ -14,7 +14,7 @@ country_event = {
 			PREV = {
 				set_autonomy = {
 					target = PREV
-					autonomy_state = Autonomy_Autonomous_Zone
+					autonomy_state = autonomy_ssr
 				}
 			}
 			Puppet_Autonomous_Cosmetic = yes
@@ -28,7 +28,7 @@ country_event = {
 			PREV = {
 				set_autonomy = {
 					target = PREV
-					autonomy_state = Autonomy_Autonomous_Zone
+					autonomy_state = autonomy_ssr
 				}
 			}
 			Puppet_Gain_Military = yes

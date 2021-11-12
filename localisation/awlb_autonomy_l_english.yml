@@ -1,0 +1,31 @@
+﻿l_english:
+  # SSRs - Soviet Socialist Republics, exclusive for core communist Russian territory.
+  # Free
+  autonomy_ssr: "Soviet Socialist Republic"
+  autonomy_assr: "Autonomous Soviet Socialist Republic"
+  # Annexed
+
+  # URs - Union Republics, exclusive for core non-communist Russian territory.
+  # Free
+  autonomy_ur: "Union Republic"
+  autonomy_aur: "Autonomous Union Republic"
+  # Annexed
+
+  # Brother Revolution - Communist revolution/country brought under special protection of another communist country.
+  # Satellite - Low autonomy
+  autonomy_brother_revolution: "Brother Revolution"
+  # Free
+
+  # Commonwealth - Exclusive for the UK or countries with monarchies. All work exactly as regular puppets.
+  # Annexed
+  autonomy_integrated_colony: "Integrated Colony"
+  autonomy_colony: "Colony"
+  autonomy_dominion: "Dominion"
+  # Free
+
+  # Regular puppets
+  # Annexed
+  autonomy_integrated_puppet: "Integrated Puppet"
+  autonomy_puppet: "Puppet"
+  autonomy_satellite: "Satellite"
+  # Free
