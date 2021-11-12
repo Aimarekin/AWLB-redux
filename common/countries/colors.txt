@@ -182,6 +182,18 @@ PRC = {
 	color = rgb { 255 20 75 }
 	color_ui = rgb { 255 20 75 }
 }
+CHI = {
+	color = hsv { 0.18 0.6 0.9 }
+	color_ui = hsv { 0.18 0.3 0.9 }
+}
+UYG = {
+	color = rgb { 71 190 152 }
+	color_ui = rgb { 222 247 198 }
+}
+TIB = {
+	color = rgb { 80 115 45}
+	color_ui = rgb { 222 247 198 }
+}
 MON = {
 	color = rgb { 168 0 70 }
 	color_ui = rgb { 168 0 70 }

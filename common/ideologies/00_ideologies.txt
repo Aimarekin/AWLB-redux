@@ -2,7 +2,10 @@ ideologies = {
 	
 	authcom = {
 		
-		types = { stalinism = {} }
+		types = {
+			authcom_stalinism = {}
+			authcom_maoism = {}
+		}
 		dynamic_faction_names = { 
 			"FACTION_NAME_COMMUNIST_1" 
 			"FACTION_NAME_COMMUNIST_2"
@@ -214,7 +217,8 @@ ideologies = {
 	authcap = {
 		
 		types = { 
-			fascism = {}
+			authcap_fascism = {}
+			authcap_monarchy = {}
 		}
 		dynamic_faction_names = { 
 			"FACTION_NAME_DEMOCRATIC_1"

@@ -1,4 +1,4 @@
-capital = 622
+capital = 613
 set_stability = 0.6
 set_war_support = 0.6
 
@@ -16,7 +16,7 @@ set_technology = {
 }
 
 set_politics = {
-	ruling_party = authcom
+	ruling_party = authcap
 	last_election = "1.1.1"
 	election_frequency = 48
 	elections_allowed = yes
@@ -27,8 +27,8 @@ set_popularities = {
 }
 
 create_country_leader = {
-	name = "Mao Zedong"
-	picture = "gfx/leaders/CHI/Portrait_China_Mao_Zedong.dds"
-	ideology = authcom_maoism
+	name = "Chiang Kai-shek"
+	picture = "gfx/leaders/CHI/Portrait_China_Chiang_Kai_Shek.dds"
+	ideology = authcap
 	traits = { }
 }

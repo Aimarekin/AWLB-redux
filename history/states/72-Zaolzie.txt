@@ -10,8 +10,8 @@ state = {
 	}
 
 	history = {
-		owner = ZAP
-		add_core_of = ZAP
+		owner = POL
+		
 		add_core_of = POL
 		add_core_of = CZE
 		
