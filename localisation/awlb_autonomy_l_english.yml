@@ -16,7 +16,7 @@
   autonomy_brother_revolution: "Brother Revolution"
   # Free
 
-  # Commonwealth - Exclusive for the UK or countries with monarchies. All work exactly as regular puppets.
+  # Commonwealth - Exclusive for the UK or countries with monarchies, or colonial possessions. All work exactly as regular puppets.
   # Annexed
   autonomy_integrated_colony: "Integrated Colony"
   autonomy_colony: "Colony"
