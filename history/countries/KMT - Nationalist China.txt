@@ -22,9 +22,7 @@ set_politics = {
 	elections_allowed = yes
 }
 
-set_popularities = {
-	New_Marxism = 100
-}
+
 
 create_country_leader = {
 	name = "Chiang Kai-shek"
