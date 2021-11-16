@@ -1,0 +1,5 @@
+propaganda_run = {
+	var:propaganda_id = {
+		add_to_array = { propaganda_runs = PREV }
+	}
+}

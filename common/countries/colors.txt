@@ -186,7 +186,7 @@ CHI = {
 	color = hsv { 0.18 0.6 0.9 }
 	color_ui = hsv { 0.18 0.3 0.9 }
 }
-UYG = {
+SIK = {
 	color = rgb { 71 190 152 }
 	color_ui = rgb { 222 247 198 }
 }

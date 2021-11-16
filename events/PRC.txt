@@ -1,0 +1,35 @@
+add_namespace = PRC.CivilWar
+
+# Move capital to Beijing
+country_event = {
+	id = PRC.CivilWar.1
+	title = PRC.CivilWar.1.t
+	desc = PRC.CivilWar.1.d
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = PRC
+		has_full_control_of_state = 608
+	}
+
+	# Move capital to Beijing
+	option = {
+		name = PRC.CivilWar.1.A
+		set_capital = 608
+	}
+	# Yan'An is too symbolical
+	option = {
+		name = PRC.CivilWar.1.B
+		trigger = {
+			CAPITAL = { state = 622 }
+		}
+	}
+	# Keep capital
+	option = {
+		name = PRC.CivilWar.1.C
+		trigger = {
+			NOT = { CAPITAL = { state = 622 } }
+		}
+	}
+}

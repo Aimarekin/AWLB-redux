@@ -259,3 +259,11 @@ d_set_militarize_zone = {
 		set_demilitarized_zone = no
 	}
 }
+
+d_set_debug_var = {
+	set_variable = { debug_var = GER }
+}
+
+d_set_debug_array = {
+	add_to_array = { debug_array = USA }
+}

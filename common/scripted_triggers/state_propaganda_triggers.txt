@@ -1,0 +1,21 @@
+propaganda_free_slots = {
+	custom_trigger_tooltip = {
+		tooltip = propaganda_x_free_slots
+
+		check_variable = {
+			var = propaganda_slots
+			value = free_slots_to_check
+			compare = greater_than_or_equals
+		}
+	}
+}
+
+propaganda_run_max_times = {
+	custom_trigger_tooltip = {
+		tooltip = propaganda_run_x_times
+
+
+
+		check_variable = { times_detected < times_to_check }
+	}
+}

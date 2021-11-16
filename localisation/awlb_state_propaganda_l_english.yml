@@ -1,0 +1,15 @@
+﻿l_english:
+  state_propaganda: "State Propaganda"
+  
+  propaganda_slot_not_active: "§GFree Slot§!\nWe are not currently running a propaganda campaign."
+  propaganda_slot_locked: "§RLocked Slot§!\nThis slot is locked."
+
+  
+
+  # Modifiers
+  propaganda_daily_conscription: "Daily recuitable population factor"
+
+  # Triggers
+  propaganda_x_free_slots: "At least [?free_slots_to_check|Y0] free propaganda slot"
+  propaganda_run_x_times: "Propaganda campaign run a maximum of [?times_to_check|Y0] times"
+

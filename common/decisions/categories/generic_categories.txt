@@ -1,0 +1,8 @@
+state_propaganda = {
+	icon = GFX_decision_category_generic_propaganda
+	visible_when_empty = yes
+
+	available = {
+		
+	}
+}

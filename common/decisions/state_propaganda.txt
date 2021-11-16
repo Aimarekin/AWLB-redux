@@ -1,0 +1,27 @@
+state_propaganda = {
+
+	# ID 1
+    propaganda_men_to_the_front = {
+		allowed = { 
+			always = yes
+		}
+
+		days_remove = 5
+
+		available = {
+			set_temp_variable = { propaganda_id = 1 }
+			set_temp_variable = { times_to_check = 3 }
+			propaganda_run_max_times = yes
+		}
+
+		complete_effect = {
+			set_temp_variable = { propaganda_id = 1 }
+			propaganda_run = yes
+		}
+
+        modifier = {
+			propaganda_daily_conscription = 0.025
+		}
+	}
+
+}
