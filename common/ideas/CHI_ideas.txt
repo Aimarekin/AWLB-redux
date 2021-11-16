@@ -1,0 +1,58 @@
+ideas = {
+	country = {
+
+        #
+        # SHARED
+        #
+
+
+
+        #
+        # PRC
+        #
+
+		CHI_civil_war_idea_PRC = { 
+            name = CHI_civil_war_idea
+			picture = CHI_civil_war_idea
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+				
+			modifier = {
+				war_support_factor = 0.15
+			}
+        }
+
+        #
+        # KMT
+        #
+
+        CHI_civil_war_idea_KMT = { 
+            name = CHI_civil_war_idea
+			picture = CHI_civil_war_idea
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+				
+			modifier = {
+                stability_factor = 0.05
+				war_support_factor = 0.2
+			}
+        }
+
+	}
+}
