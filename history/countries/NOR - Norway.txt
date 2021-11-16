@@ -16,8 +16,8 @@ set_technology = {
 }
 
 set_politics = {
-	ruling_party = Hypersocialism
-	last_election = "1.1.1"
+	ruling_party = demsoc
+	last_election = "1945.9.8"
 	election_frequency = 48
 	elections_allowed = yes
 }
@@ -27,7 +27,7 @@ set_popularities = {
 }
 
 create_country_leader = {
-	name = "Genericco"
+	name = "Einar Gehardsen"
 	picture = "gfx/leaders/leader_unknown.dds"
 	ideology = Hypersocialism_ideology
 }
