@@ -1,0 +1,36 @@
+CHI_civil_war = {
+
+    evacuate_to_taiwan = {
+		allowed = { 
+			tag = KMT
+		}
+
+        cost = 25
+        # Select only once
+
+        days_remove = 30
+
+		available = {
+            surrender_progress > 0.5
+			has_full_control_of_state = 1
+		}
+
+		complete_effect = {
+			transfer_state = 1
+            add_timed_idea = {
+                idea = CHI_KMT_evacuate_taiwan
+                days = 30
+            }
+		}
+
+        remove_effect = {
+            # Transfer all Chinese mainland states to China
+
+        }
+
+        modifier = {
+			propaganda_daily_conscription = 0.025
+		}
+	}
+
+}

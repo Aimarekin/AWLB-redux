@@ -17,7 +17,7 @@ ideas = {
 				conscription_factor = -0.5
 				autonomy_manpower_share = 0.5
 				autonomy_gain_global_factor = -0.25
-				training_time = 1
+				training_time = 2
 				attack = -0.5
 				defense = -0.25
 			}
