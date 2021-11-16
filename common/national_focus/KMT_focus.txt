@@ -1,0 +1,125 @@
+﻿focus_tree = {
+	id = KMT_focus
+	
+	country = {
+		base = 0
+
+		modifier = {
+			tag = KMT
+			add = 10
+		}
+	}
+	reset_on_civilwar = no
+
+	focus = {
+		id = KMT_defend_shanghai
+		icon = GFX_goal_generic_defence
+		x = 1
+		y = 0
+		cost = 7
+		
+		available = {
+			controls_state = 1
+		}
+
+		mutually_exclusive = {
+			focus = KMT_flee_shanghai
+		}
+
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = KMT_flee_shanghai
+		icon = GFX_goal_generic_amphibious_assault
+		x = 2
+		y = 0
+		relative_position_id = KMT_defend_shanghai
+
+		cost = 7
+		
+		bypass = {
+			NOT = { controls_state = 1 }
+		}
+
+		mutually_exclusive = {
+			focus = SPA_defend_shanghai
+		}
+
+		completion_reward = {
+			add_war_support = -0.05
+
+		}
+	}
+
+	focus = {
+		id = KMT_three_principles_of_the_people
+		icon = GFX_focus_generic_self_management
+		x = 5
+		y = 0
+
+		cost = 70
+
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = KMT_democracy
+		icon = GFX_goal_support_democracy
+		x = 0
+		y = 1
+		relative_position_id = KMT_three_principles_of_the_people
+
+		prerequisite = {
+			focus = KMT_three_principles_of_the_people
+		}
+
+		cost = 70
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = KMT_welfare
+		icon = GFX_focus_generic_self_management
+		x = -3
+		y = 0
+		relative_position_id = KMT_democracy
+
+		prerequisite = {
+			focus = KMT_three_principles_of_the_people
+		}
+
+		cost = 70
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = KMT_nationalism
+		icon = GFX_goal_generic_national_unity
+		x = 3
+		y = 0
+		relative_position_id = KMT_democracy
+
+		prerequisite = {
+			focus = KMT_three_principles_of_the_people
+		}
+
+		cost = 70
+
+		completion_reward = {
+			
+		}
+	}
+
+}
