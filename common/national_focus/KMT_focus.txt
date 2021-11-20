@@ -19,7 +19,7 @@
 		cost = 7
 		
 		available = {
-			controls_state = 1
+			controls_state = 608
 		}
 
 		mutually_exclusive = {
@@ -41,11 +41,11 @@
 		cost = 7
 		
 		bypass = {
-			NOT = { controls_state = 1 }
+			NOT = { controls_state = 608 }
 		}
 
 		mutually_exclusive = {
-			focus = SPA_defend_shanghai
+			focus = KMT_defend_shanghai
 		}
 
 		completion_reward = {
