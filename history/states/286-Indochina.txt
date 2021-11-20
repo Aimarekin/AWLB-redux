@@ -11,7 +11,7 @@ state = {
 
 	history = {
 		victory_points = { 4401 3 }
-		owner = VIN
+		owner = FRP
 		add_core_of = VIN
 		
 		buildings = {infrastructure = 3 industrial_complex = 1 air_base = 2 4401 = { naval_base = 4 } } 

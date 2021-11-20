@@ -11,7 +11,7 @@ state = {
 
 	history = {
 		victory_points = { 7376 1 }
-		owner = CAM
+		owner = FRP
 		add_core_of = CAM
 		
 		buildings = {infrastructure = 1 7432 = { naval_base = 1 } } 

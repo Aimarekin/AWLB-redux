@@ -11,8 +11,7 @@ state = {
 
 	history = {
 		victory_points = { 7617 5 }
-		owner = COL
-		add_core_of = COL
+		owner = USA
 		add_core_of = CTA
 		
 		buildings = {infrastructure = 4 air_base = 6 7617 = { naval_base = 3 } } 
