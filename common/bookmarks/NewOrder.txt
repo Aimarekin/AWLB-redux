@@ -12,7 +12,7 @@ bookmarks = {
 			ideology = Marxism_Leninism
 		}
 		
-		"CHI" = {
+		"PRC" = {
 			history = "CHI_SECOND_COLD_WAR_DESC"
 			ideology = New_Marxism
 		}
