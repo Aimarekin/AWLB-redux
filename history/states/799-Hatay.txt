@@ -1,24 +1,29 @@
-state = {
-	id = 799
-	name = "STATE_799"
-	state_category = enclave
+state={
+	id=799
+	name="STATE_799"
+	provinces={
+		12029 
+	}
+	manpower = 234379
 	
-	resources = {
-		steel = 1
-		oil = 1
-		aluminium = 1
-	}
+	state_category = enclave
 
-	history = {
-		victory_points = { 12029 1 }
-		owner = TUR
+	history= {
+		owner = FRA
 		add_core_of = TUR
-		
-		buildings = {infrastructure = 2 } 
+		add_core_of = SYR
+		victory_points = {
+			12029 1
+		}
+		buildings = {
+			infrastructure = 1
+		}
+
+		1938.9.30 = {
+			owner = TUR
+			controller = TUR
+		}
 	}
 
-	provinces = { 12029 }
-
-	manpower = 234379 # = 1
-	buildings_max_level_factor = 1.000
+	local_supplies=0.0 
 }
