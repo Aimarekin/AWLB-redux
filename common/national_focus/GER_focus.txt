@@ -1,0 +1,124 @@
+focus_tree = {
+	id = KMT_focus
+	
+	country = {
+		base = 0
+
+		modifier = {
+			tag = GER
+			add = 10
+		}
+	}
+	reset_on_civilwar = no
+
+	focus = {
+		id = GER_grossdeutschland
+		icon = GFX_focus_ger_great_red_menace
+		x = 1
+		y = 0
+		cost = 35
+
+		mutually_exclusive = {
+			focus = GER_local_autonomy
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 30
+			every_controlled_state = {
+				limit = {
+					has_resistance = yes
+				}
+				add_resistance = -10
+				add_compliance = 5
+			}
+		}
+	}
+
+	focus = {
+		id = GER_local_autonomy
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 4
+		y = 0
+		relative_position_id = GER_grossdeutschland
+		cost = 70
+
+		mutually_exclusive = {
+			focus = GER_grossdeutschland
+		}
+
+		completion_reward = {
+			add_stability = -0.1
+			# Decrease auth support
+			every_controlled_state = {
+				limit = {
+					has_resistance = yes
+				}
+				add_compliance = 15
+			}
+			# Anger Moscow!
+		}
+	}
+
+	focus = {
+		id = GER_occupy_germany
+		icon = GFX_goal_generic_forceful_treaty
+		x = -1
+		y = 1
+		relative_position_id = GER_grossdeutschland
+		cost = 70
+
+		prerequisite = {
+			focus = GER_grossdeutschland
+		}
+		mutually_exclusive = {
+			focus = GER_ask_moscow_for_remilitarization
+		}
+
+		completion_reward = {
+			# Demilitarize all
+			# Anger Moscow!
+		}
+	}
+
+	focus = {
+		id = GER_ask_moscow_for_remilitarization
+		icon = GFX_focus_generic_treaty
+		x = 2
+		y = 0
+		relative_position_id = GER_occupy_germany
+		cost = 70
+
+		prerequisite = {
+			focus = GER_grossdeutschland
+		}
+		mutually_exclusive = {
+			focus = GER_ask_moscow_for_remilitarization
+		}
+
+		completion_reward = {
+			# Ask Moscow to demilitarize
+		}
+	}
+
+	focus = {
+		id = GER_anti_opposition_campaigns
+		icon = GFX_goal_generic_major_war
+		x = 1
+		y = 1
+		relative_position_id = GER_occupy_germany
+		cost = 70
+
+		prerequisite = {
+			focus = GER_occupy_germany
+			focus = GER_ask_moscow_for_remilitarization
+		}
+
+		completion_reward = {
+			# Enable military campaigns to fight resistance
+		}
+	}
+
+	
+
+}
