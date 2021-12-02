@@ -6,13 +6,14 @@ state={
 	}
 
 	history={
-		owner = RUS
+		owner = FIN
+		add_core_of = FIN
+		add_core_of = KAR
+		add_core_of = RUS
 		buildings = {
 			infrastructure = 2
 
 		}
-		add_core_of = RUS
-		add_core_of = KAR
 	}
 
 	provinces={

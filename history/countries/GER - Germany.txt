@@ -1,5 +1,5 @@
 capital = 64
-set_stability = 0.6
+set_stability = 0.45
 set_war_support = 0.6
 oob = "GER"
 set_country_flag = has_starting_oob
@@ -26,12 +26,8 @@ set_politics = {
 	elections_allowed = yes
 }
 
-set_popularities = {
-	Reformist_Socialism = 100
-}
-
 add_ideas = {
-	GER_A_State_Disarmed
+	GER_warsaw_treaty
 }
 
 create_country_leader = {
@@ -46,4 +42,24 @@ create_country_leader = {
 	picture = "gfx/leaders/GER/Michael Kuhnen.dds"
 	ideology = Hypersocialism_ideology
 	traits = { SUBIDEOLOGY_National_Bolshevism }
+}
+
+##
+## OCCUPIED TERRITORY
+##
+# Denmark
+99 = {
+	set_resistance = 15
+	set_compliance = 25
+}
+37 = {
+	set_resistance = 15
+	set_compliance = 25
+}
+
+# Austria
+# South Tyrol
+39 = {
+	set_resistance = 10
+	set_compliance = 35
 }

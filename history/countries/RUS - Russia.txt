@@ -112,7 +112,6 @@ set_autonomy = { target = ARM autonomy_state = autonomy_ssr }
 set_autonomy = { target = AZR autonomy_state = autonomy_ssr }
 set_autonomy = { target = TAN autonomy_state = autonomy_ssr }
 set_autonomy = { target = MOL autonomy_state = autonomy_ssr }
-set_autonomy = { target = HOK autonomy_state = autonomy_ssr }
 
 every_subject = {
 	PREV = { add_to_faction = PREV }

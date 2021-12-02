@@ -314,6 +314,10 @@
  FRA_Reformist_Socialism: "French Socialist Republic"
  FRA_Reformist_Socialism_ADJ: "French"
  FRA_Reformist_Socialism_DEF: "The French Socialist Republic"
+
+ FFR: "Free France"
+ FFR_ADJ: "French"
+ FFR_DEF: "Free France"
  
  GEO: "Georgia"
  GEO_ADJ: "Georgian"
@@ -1507,13 +1511,9 @@
  RHO_DEF: "the Revolutionary Republic of Rhodesia"
  RHO: "Rhodesian"
 
- JPN: "People's Republic of Japan"
- JPN_DEF: "the People's Republic of Japan"
- JPN_ADJ: "Japanese"
-
- HOK: "Democratic Hokkaido Republic"
- HOK_DEF: "the Democratic Hokkaido Republic"
- HOK_ADJ: "Hokkaido"
+ JAP: "People's Republic of Japan"
+ JAP_DEF: "the People's Republic of Japan"
+ JAP_ADJ: "Japanese"
 
  ARG: "Confederate Socialist Republics of South America"
  ARG_DEF: "the Confederate Socialist Republics of South America"

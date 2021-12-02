@@ -1,0 +1,245 @@
+focus_tree = {
+	id = FFR_focus
+	
+	country = {
+		base = 0
+
+		modifier = {
+			tag = FFR
+			add = 10
+		}
+	}
+	reset_on_civilwar = no
+
+	focus = {
+		id = FFR_colonial_affairs
+		icon = GFX_goal_generic_defence
+		x = 5
+		y = 0
+		cost = 20
+		
+		available = {
+			any_controlled_state = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		completion_reward = {
+			every_controlled_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+				}
+				add_resistance = -10
+				add_compliance = 5
+			}
+		}
+	}
+
+	focus = {
+		id = FFR_colonial_legions
+		icon = GFX_focus_generic_little_entente
+		x = 0
+		y = 1
+		relative_position_id = FFR_colonial_affairs
+		cost = 70
+		
+		prerequisite = {
+			focus = FFR_colonial_affairs
+		}
+
+		available = {
+			any_controlled_state = {
+				compliance > 30
+			}
+		}
+
+		completion_reward = {
+			# Spawn colonial legions
+			# Add manpower bonuses
+		}
+	}
+
+	focus = {
+		id = FFR_expand_colonial_legions
+		icon = GFX_focus_generic_manpower
+		x = -1
+		y = 1
+		relative_position_id = FFR_colonial_legions
+		cost = 70
+		
+		prerequisite = {
+			focus = FFR_colonial_legions
+		}
+
+		available = {
+			any_controlled_state = {
+				NOT = { is_core_of = ROOT }
+				compliance > 50
+			}
+		}
+
+		completion_reward = {
+			# Spawn colonial legions
+			# Expand manpower bonuses
+		}
+	}
+
+	focus = {
+		id = FFR_integrate_colonial_legions
+		icon = GFX_goal_generic_national_unity
+		x = 1
+		y = 1
+		relative_position_id = FFR_colonial_legions
+		cost = 70
+		
+		prerequisite = {
+			focus = FFR_colonial_legions
+		}
+
+		available = {
+			any_controlled_state = {
+				NOT = { is_core_of = ROOT }
+				compliance > 50
+			}
+		}
+
+		completion_reward = {
+			# Army bonuses
+			# Unlock colonial legion template
+		}
+	}
+
+	focus = {
+		id = FFR_stamp_out_the_rebels
+		icon = GFX_goal_generic_major_war
+		x = -3
+		y = 1
+		relative_position_id = FFR_colonial_affairs
+		cost = 35
+		
+		prerequisite = {
+			focus = FFR_colonial_affairs
+		}
+
+		available = {
+			any_controlled_state = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		bypass = {
+			any_controlled_state = {
+				NOT = { is_core_of = ROOT }
+			}
+			all_controlled_state = {
+				OR = {
+					NOT = { is_core_of = ROOT }
+					resistance < 15
+				}
+			}
+		}
+
+		completion_reward = {
+			unlock_decision_category_tooltip = FFR_stamp_out_rebels_cat
+		}
+	}
+
+	focus = {
+		id = FFR_centralize_administration
+		icon = GFX_focus_generic_self_management
+		x = 3
+		y = 1
+		relative_position_id = FFR_colonial_affairs
+		cost = 35
+		
+		prerequisite = {
+			focus = FFR_colonial_affairs
+		}
+
+		available = {
+			any_controlled_state = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		bypass = {
+			any_controlled_state = {
+				NOT = { is_core_of = ROOT }
+			}
+			all_controlled_state = {
+				OR = {
+					NOT = { is_core_of = ROOT }
+					resistance < 15
+				}
+			}
+		}
+
+		completion_reward = {
+			unlock_decision_category_tooltip = FFR_stamp_out_rebels_cat
+		}
+	}
+
+	focus = {
+		id = FFR_authority
+		icon = GFX_goal_demand_sudetenland
+		x = 0
+		y = 2
+		relative_position_id = FFR_stamp_out_the_rebels
+		cost = 35
+		
+		mutually_exclusive = {
+			focus = FFR_equality
+		}
+
+		prerequisite = {
+			focus = FFR_stamp_out_the_rebels
+		}
+
+		available = {
+			all_controlled_state = {
+				OR = {
+					NOT = { is_core_of = ROOT }
+					resistance < 15
+				}
+			}
+		}
+
+		completion_reward = {
+			every_controlled_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+				}
+				add_resistance = 15
+				add_compliance = 5
+			}
+		}
+	}
+
+	focus = {
+		id = FFR_equality
+		icon = GFX_goal_generic_neutrality_focus
+		x = 0
+		y = 2
+		relative_position_id = FFR_centralize_administration
+		cost = 35
+		
+		mutually_exclusive = {
+			focus = FFR_authority
+		}
+
+		prerequisite = {
+			focus = FFR_centralize_administration
+		}
+
+		completion_reward = {
+			every_controlled_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+				}
+				add_resistance = -10
+				add_compliance = -5
+			}
+		}
+	}
+
+}

@@ -1,0 +1,23 @@
+scripted_gui = {
+
+	FFR_carve_up_sgui = {
+		context_type = decision_category
+		window_name = "FFR_carve_up_gui"
+
+		properties = {
+			entry_flag = {
+				image = "[?THIS.GetFlag]"
+			}
+		}
+
+		dynamic_lists = {
+			carve_participants = {
+				array = global.countries
+				entry_container = carver_entry
+				change_scope = yes
+				value = carver
+			}
+		}
+	}
+	
+}

@@ -1,8 +1,6 @@
-capital = 536
-set_stability = 0.4
+capital = 16
+set_stability = 0.6
 set_war_support = 0.6
-
-set_cosmetic_tag = COUNTRY_Soviet_Socialist_Republic
 
 set_technology = {
 	infantry_weapons = 1
@@ -18,18 +16,19 @@ set_technology = {
 }
 
 set_politics = {
-	ruling_party = Marxism_Leninism
+	ruling_party = New_Marxism
 	last_election = "1.1.1"
 	election_frequency = 48
 	elections_allowed = yes
 }
 
 set_popularities = {
-	Marxism_Leninism = 100
+	New_Marxism = 100
 }
 
 create_country_leader = {
-	name = "Genericco"
-	picture = "gfx/leaders/leader_unknown.dds"
-	ideology = Marxism_Leninism_ideology
+	name = "Georges Marchais"
+	picture = "gfx/leaders/FRA/Georges Marchais.dds"
+	ideology = New_Marxism_ideology
+	traits = { SUBIDEOLOGY_Anti_Capitalism }
 }

@@ -122,6 +122,10 @@ FRA = {
 	color = rgb { 78 109 173 }
 	color_ui = rgb { 78 109 173 }
 }
+FFR = {
+	color = rgb { 57 113 228 }
+	color_ui = rgb { 74 147 255 }
+}
 OCC = {
 	color = rgb { 128 116 128 }
 	color_ui = rgb { 128 116 128 }
@@ -630,11 +634,7 @@ SAF = {
 	color = rgb { 75 26 78 }
 	color_ui = rgb { 75 26 78 }
 }
-HOK = {
-	color = rgb { 100 40 40 }
-	color_ui = rgb { 100 40 40 }
-}
-JPN = {
+JAP = {
 	color = rgb { 96 185 120 }
 	color_ui = rgb { 96 185 120 }
 }

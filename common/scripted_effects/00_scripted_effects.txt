@@ -170,3 +170,46 @@ Protect_my_Child = {
 		modifier = offered_support
 	}
 }
+
+calculate_every_deployed_manpower = {
+	set_temp_variable = {
+		goal = manpower_to_calculate
+	}
+	multiply_temp_variable = {
+		goal = iterations
+	}
+	if = {
+		limit = {
+			meta_trigger = {
+				text = {
+					has_army_manpower = {
+						size > [GOAL]
+					}
+				}
+				GOAL = goal
+			}
+		}
+		#log = "Iter! [?manpower_result], [?iterations]"
+		add_to_temp_variable = {
+			manpower_result = 1
+		}
+		add_to_temp_variable = {
+			iterations = 1
+		}
+		calculate_every_deployed_manpower = yes
+	}
+}
+
+d_calc_manpower_test = {
+	set_temp_variable = {
+		manpower_to_calculate = 25000
+	}
+	set_temp_variable = {
+		manpower_result = 0
+	}
+	set_temp_variable = {
+		iterations = 1
+	}
+	calculate_every_deployed_manpower = yes
+	log = "Boobies! [?manpower_result]"
+}

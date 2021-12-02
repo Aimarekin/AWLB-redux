@@ -1,0 +1,163 @@
+add_namespace = FFR_carve_up
+
+# HIDDEN: Triggers the French carve up events and decisions for other countries
+country_event = {
+	id = FFR_carve_up.1 
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		set_global_flag = FFR_carve_up_chain
+		every_other_country = {
+			limit = {
+				is_capitalist_allied = yes
+				OR = {
+					has_global_flag = capconf_all_members
+					is_major = yes
+				}
+			}
+			country_event = FFR_carve_up.2
+		}
+	}
+}
+
+country_event = {
+	id = FFR_carve_up.2
+	title = FFR_carve_up.2.t
+	desc = FFR_carve_up.2.d
+
+	is_triggered_only = yes
+	picture = GFX_report_event_finnish_letter
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = FFR_carve_up_bidder
+			activate_mission = carve_preparations_mission
+
+			# -10 to 10 from opinion with FFR
+			set_variable = {
+				FFR_base_points_opinion = FROM.opinion@THIS
+			}
+			multiply_variable = {
+				FFR_base_points_opinion = 0.1
+			}
+			round_variable = FFR_base_points_opinion
+
+			# Plus 5 if you're a major
+			if = {
+				limit = {
+					is_major = yes
+				}
+				set_variable = {
+					FFR_base_points_major = 5
+				}
+			}
+
+			# Minus 5 if you're at war
+			if = {
+				limit = {
+					has_war = yes
+				}
+				set_variable = {
+					FFR_base_points_war = -5
+				}
+			}
+
+			# 1 point for every 20 factories
+			set_variable = {
+				FFR_base_points_factories = num_of_factories
+			}
+			multiply_variable = {
+				FFR_base_points_factories = 0.05
+			}
+			# Truncating
+			set_temp_variable = {
+				factories_original = FFR_base_points_factories
+			}
+			round_variable = FFR_base_points_factories
+			subtract_from_temp_variable = {
+				factories_original = FFR_base_points_factories
+			}
+			if = {
+				limit = {
+					check_variable = { factories_original < 0 }
+				}
+				subtract_from_variable = {
+					FFR_base_points_factories = 1
+				}
+			}
+			
+
+			# 1 point for every 25K army manpower deployed
+			set_temp_variable = {
+				manpower_to_calculate = 25000
+			}
+			set_temp_variable = {
+				manpower_result = 0
+			}
+			set_temp_variable = {
+				iterations = 1
+			}
+			calculate_every_deployed_manpower = yes
+			set_variable = {
+				FFR_base_points_deployed_manpower = manpower_result
+			}
+
+			# 1 point for every state bordering a French state
+			every_controlled_state = {
+				limit = {
+					is_fully_controlled_by = PREV
+					is_owned_by = PREV
+					any_neighbor_state = {
+						is_owned_and_controlled_by = FROM
+					}
+				}
+				add_to_variable = {
+					FFR_base_points_neighbor_states = 1
+				}
+			}
+
+			# 1 point for every controlled state with less than 5 resistance?
+
+			set_variable = {
+				FFR_base_points_total = 10
+			}
+			add_to_variable = {
+				FFR_base_points_total = FFR_base_points_opinion
+			}
+			add_to_variable = {
+				FFR_base_points_total = FFR_base_points_major
+			}
+			add_to_variable = {
+				FFR_base_points_total = FFR_base_points_war
+			}
+			add_to_variable = {
+				FFR_base_points_total = FFR_base_points_factories
+			}
+			add_to_variable = {
+				FFR_base_points_total = FFR_base_points_deployed_manpower
+			}
+			add_to_variable = {
+				FFR_base_points_total = FFR_base_points_neighbor_states
+			}
+			clamp_variable = {
+				var = FFR_base_points_total
+				min = 0
+			}
+		}
+	}
+
+	option = {
+		name = FFR_carve_up.2.A
+		custom_effect_tooltip = FFR_begin_carve_up_event
+		unlock_decision_category_tooltip = carve_up_france_cat
+		effect_tooltip = {
+			activate_mission = carve_preparations_mission
+		}
+	}
+
+	option = {
+		name = FFR_carve_up.2.B
+		custom_effect_tooltip = FFR_carve_resign
+	}
+}

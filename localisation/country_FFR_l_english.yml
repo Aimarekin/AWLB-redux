@@ -1,0 +1,18 @@
+﻿l_english:
+
+  # Events
+  FFR_carve_up.2.t: "Preparations for France's carving begin"
+  FFR_carve_up.2.d.A: "According to the terms of the Washington Conference, governments in exile will be ended and split between the independent members of the ANO. Following this, several countries have began to lobby for support and gain influence within the French government to win a bigger share.\n\nOf course, we should quickly begin to expand our influence over France if we wish to getthe territory we deserve."
+  FFR_carve_up.2.A: "Let's not lose any more time."
+  FFR_carve_up.2.B: "A depressive shitshow we will not participate in."
+
+  # Tooltips and flags
+  FFR_carve_up_bidder: "Is participating in the carving of France"
+  FFR_carved_up: "France has been carved up"
+  FFR_carve_up_preparations: "Preparations for France's carving are underway"
+  FFR_carve_lobbied_twice: "Has completed this decision at least §Y2§! times"
+  FFR_carve_add_support_points: "Add [?FFR_add_support_points|+0] support points."
+  FFR_begin_carve_up_event: "We will have §Y60§! days to gain §YSuppprt Points§! in France. These points will be used to bid for French territory, which we will gain ownership of if we bid the most points.\n\nWe start off with some points:\nBase points: §G10§!\nFrom [FROM.GetNameDef]'s opinion of us: [?FFR_base_points_opinion|+0]\nBonus for being a major: [?FFR_base_points_major|+0]\nPenalty for being at war: [?FFR_base_points_war|+0]\nPoints for every 20 factories: [?FFR_base_points_factories|+0]\nPoints for every 25K deployed army manpower: [?FFR_base_points_deployed_manpower|+0]\nPoints for every state neighboring [FROM.GetNameDef]: [?FFR_base_points_neighbor_states|+0]\n§YTotal Points§!: [?FFR_base_points_total|+0]"
+  FFR_carve_resign: "We will §Rnot§! participate in the carving of France, and will not be entitled to any territory."
+  FFR_carve_up_mission_end: "The bids will end, and whoever has the most points on each category will gain ownership of the states in the category, plus a fraction of France's military."
+  FFR_carve_preparations_mission_end: "Decisions to gain more support points will no longer be available and be aborted. The bidding will begin, and you will be able to secretly place your support points on categories which represent states owned by France. Whoever has the most points on each category will gain ownership of it's states, plus a fraction of France's military"
